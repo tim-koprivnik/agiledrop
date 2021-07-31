@@ -1,0 +1,14 @@
+header {
+    background: red;
+    .region {
+        nav {
+            ul {
+                display: flex;
+                justify-content: center;
+                li {
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+}

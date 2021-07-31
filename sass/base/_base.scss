@@ -1,0 +1,31 @@
+// DEFAULT
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+//   font-size: 62.5%;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+// COLORS
+$color-1: #FF5252;
+$color-2: #0097A7;
+$color-3: #161E21;
+$color-4: #FFFFFF;
+$color-5: #101010;
+$color-6: #D4D4D4;
+$color-7: #949494;
+
+
+// BODY
+body {
+    background: $color-5;
+}
