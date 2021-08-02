@@ -4,17 +4,24 @@
   'block',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
-  'agiledrop-content-full-top-content-header'
+  'agiledrop-content-full-top-content-header',
+  'hero'
 ]
 %}
 
+{# fixed anchoring #}
+<div class="anchor" id="challenge-home"></div>
+{# .fixed anchoring #}
+
 <div{{ attributes.addClass(classes) }} style="background-image: url({{ header_background_img }});">
-  <div class="container" id="challenge-home">
+  <div class="container">
     {% if label %}
       <h2{{ title_attributes }}>{{ label }}</h2>
+      {# <img src="{{ base_path ~ directory }}/images/Line1.png" alt="Line" class="divider"> #}
     {% endif %}
-    {{ content.body }}
-    {{ content.field_link }}
+    {# {{ content.body }} #}
+    <h1>Music<span style="font-weight:100;">Theme</span></h1>
+    <div class="btn-primary">{{ content.field_link }}</div>
     {% endblock %}
   </div>
 </div>

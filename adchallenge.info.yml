@@ -6,7 +6,8 @@ version: 1.0
 core: 8.x
 libraries:
  - adchallenge/global-styling
- - addchallenge/bootstrap_cdn
+#  - adchallenge/bootstrap_cdn
+ - adchallenge/font-awesome
 
 # Regions
 regions:

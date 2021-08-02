@@ -1,12 +1,66 @@
 header {
-    background: red;
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 99px;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+
     .region {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+
+        @media (max-width: $media-sm) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        #block-adchallenge-branding {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: $media-sm) {
+                margin-top: 2.5px;
+            }
+
+            .site-slogan {
+                margin-left: 31px;
+            }
+        }
+
         nav {
+            @media (max-width: $media-sm) {
+                margin-top: 10.5px;
+            }
+
             ul {
                 display: flex;
-                justify-content: center;
+
                 li {
-                    margin: 0 20px;
+                    position: relative;
+
+                    &:not(:first-of-type) {
+                        margin-left: 21px;
+                    }
+
+                    @media (max-width: $media-sm) {
+                        margin-left: 0;
+                        margin: 0 10.5px;
+                    }
+
+                    &:hover::after {
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        top: 27px;
+                        border-bottom: 5px solid $color-2;
+                        border-radius: 3px;
+                        width: 37px;
+                    }
                 }
             }
         }

@@ -1,0 +1,78 @@
+#challenge-about-me {
+  padding-top: 245px;
+  padding-bottom: 220px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $media-md) {
+    padding: 65px 0;
+    flex-direction: column;
+  }
+
+  h2 {
+      padding-bottom: 65px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 41px; //calc(65px - 24px);
+      left: 0;
+      border: 3px solid #0097A7;
+      width: 100px;
+    }
+  }
+
+  p {
+      width: 420px;
+      height: 240px;
+
+      @media (max-width: $media-sm) {
+        width: 310px;
+      }
+  }
+
+  img, #about-me-img {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -168px;
+      top: -127px;
+      z-index: -1;
+      width: 330px;
+      height: 330px;
+      background: $color-8;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -75px;
+      bottom: -71px;
+      z-index: -1;
+      width: 150px;
+      height: 150px;
+      background: $color-10;
+      transform: rotate(-45deg);
+
+      @media (max-width: 1280px) {
+        right: 31px;
+      }
+    }
+  }
+
+  #about-me-img-before {
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    z-index: 4;
+  }
+
+  #about-me-img-after {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+  }
+}

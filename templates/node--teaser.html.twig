@@ -70,30 +70,31 @@
  *   in different view modes.
  */
 #}
-{%
-  set classes = [
-  'node',
-  'node--type-' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-]
-%}
-{% set createdDate = node.getCreatedTime|date('d.m.Y') %}
-{{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+  {%
+    set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+  %}
+  {% set createdDate = node.getCreatedTime|date('d.m.Y') %}
 
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-  <div{{ content_attributes.addClass('node__content') }}>
-    <div class="createdDate">{{ createdDate }}</div>
-    {{ content }}
-  </div>
+  {{ attach_library('classy/node') }}
+  <article{{ attributes.addClass(classes) }}>
 
-</article>
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h3{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h3>
+    {% endif %}
+    {{ title_suffix }}
+    <div{{ content_attributes.addClass('node__content') }}>
+      <div class="createdDate">{{ createdDate }}</div>
+      {{ content }}
+    </div>
+
+  </article>

@@ -4,10 +4,6 @@ global-styling:
     base:
       css/style.css: {}
 
-  # css:
-  #   theme:
-  #     css/style.css: {}
-
   js:
     js/scripts.js: {}
 
@@ -16,10 +12,26 @@ global-styling:
     - core/drupal
     - core/drupalSettings
 
+
 bootstrap_cdn:
   js:
-    cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
-    stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {type: external, minified: true}
+    https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js: {type: external, minified: true}
+    https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css: {type: external, minified: true}
   css:
     component:
-     stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css: {}
+      https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css: {type: external, minified: true}
+
+
+# not working?!
+font-awesome:
+  remote: https://fortawesome.github.io/Font-Awesome/
+  version: 5.15.3
+  license:
+    name: MIT
+    url: https://fortawesome.github.io/Font-Awesome/license/
+    gpl-compatible: true
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css: { type: external, minified: true }
+      

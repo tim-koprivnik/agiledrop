@@ -9,13 +9,13 @@ var	imagemin = require('gulp-imagemin');
 var	pngquant = require('imagemin-pngquant');
 	 
 gulp.task('imagemin', function () {
-    return gulp.src('/images/*')
+    return gulp.src('images/*')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('/images'));
+        .pipe(gulp.dest('images'));
 });
 
 
@@ -133,14 +133,14 @@ gulp.task('eslint', function(){
 	}))
 	.pipe(eslint.format())
 	// if fixed, write the file to dest
-	.pipe(gulpIf(isFixed, gulp.dest('./js/')));;
+	.pipe(gulpIf(isFixed, gulp.dest('js/')));
 });
 
 gulp.task('watch', function(){
     livereload.listen();
 
     gulp.watch('sass/**/*.scss', gulp.series('sass'));
-    gulp.watch('js/**/*.js', gulp.series('eslint'));
+    // gulp.watch('js/**/*.js', gulp.series('eslint'));
     gulp.watch(['css/style.css', './**/*.html.twig', './js/*.js'], function (files){
         livereload.changed(files)
     });
