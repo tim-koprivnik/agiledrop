@@ -2,7 +2,6 @@
 // });
 
 
-// FIXED ANCHORING
 (function($, window) {
     // console.log('test jquery');
 
