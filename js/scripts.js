@@ -2,11 +2,18 @@
 // });
 
 
+// SMOOTH SCROLLING (FIX)
+// import smoothscroll from 'smoothscroll-polyfill';
+// smoothscroll.polyfill();
+
+
 (function($, window) {
     // console.log('test jquery');
 
+
     // jQuery('#about-me-img').before('<img src="./themes/adchallenge/images/Rectangle13.png" id="about-me-img-before"/>');
     // jQuery('#about-me-img').after('<img src="./themes/adchallenge/images/Rectangle14.png" id="about-me-img-after"/>');
+
     
     // FIXED ANCHOR-ING
     var adjustAnchor = function() {
@@ -29,5 +36,4 @@
     });
 
 })(jQuery, window);
-
 
