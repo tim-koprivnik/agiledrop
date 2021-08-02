@@ -94,6 +94,7 @@ ul, ul.menu, menu {
 a {
   text-decoration: none;
   color: #FFFFFF;
+  position: relative;
 }
 
 body {
@@ -227,7 +228,7 @@ header .region nav ul li:not(:first-of-type) {
     margin: 0 10.5px;
   }
 }
-header .region nav ul li:hover::after {
+header .region nav ul li a:hover::after, header .region nav ul li a:active::after {
   position: absolute;
   content: "";
   left: 0;

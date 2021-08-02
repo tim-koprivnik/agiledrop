@@ -52,7 +52,7 @@ header {
                         margin: 0 10.5px;
                     }
 
-                    &:hover::after {
+                    a:hover::after, a:active::after  {
                         position: absolute;
                         content: "";
                         left: 0;
