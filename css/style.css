@@ -238,6 +238,19 @@ header .region nav ul li a:hover::after, header .region nav ul li a:active::afte
   width: 37px;
 }
 
+.active {
+  position: relative;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  border-bottom: 5px solid #0097A7;
+  border-radius: 3px;
+  width: 37px;
+  top: 27px;
+  left: 0;
+}
+
 .hero {
   width: 100vw;
   height: 724px;

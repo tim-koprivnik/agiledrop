@@ -35,5 +35,11 @@
         adjustAnchor();
     });
 
+
+    // Adding&Removing active class on header navigation relative links
+    $(document).on('click', 'header nav li', function() {
+        $(this).addClass("active").siblings().removeClass("active");
+    })
+
 })(jQuery, window);
 
