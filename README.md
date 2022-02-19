@@ -1,2 +1,2 @@
 # agiledrop
-Drupal Theme
+Custom Drupal Theme
